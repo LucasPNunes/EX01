@@ -23,32 +23,19 @@ namespace EX01
             {
                 return (rendaBruta)*0.3;
             }
-            else
+            if(rendaBruta > 2800)
             {
-                if(rendaBruta > 2800)
-                {
-                    return rendaBruta * 0.25;
-                }
-                else
-                {
-                    if(rendaBruta > 2100)
-                    {
-                        return rendaBruta * 0.15;
-                    }
-                    else
-                    {
-                        if (rendaBruta > 1400)
-                        {
-                            return rendaBruta * 0.1;
-                        }
-                        else
-                        {
-                            return rendaBruta * 0;
-                        }
-                    }
-                }
-
+                return rendaBruta * 0.25;
             }
+            if(rendaBruta > 2100)
+            {
+                return rendaBruta * 0.15;
+            }             
+            if (rendaBruta > 1400)
+            {
+                return rendaBruta * 0.1;
+            }          
+            return rendaBruta * 0;
         }
     }
 }
